@@ -78,6 +78,15 @@ simulated brute-force bursts. The IP ranges used (`203.0.113.x`, `198.51.100.x`,
 `192.168.x.x`) are reserved for documentation and testing, so they're safe to
 publish.
 
+## Tests
+
+Unit tests write a small fake log to a temporary file and confirm the failure
+counts, the threshold behaviour, and the usernames tracked per IP. Run them with:
+
+```bash
+python3 -m unittest
+```
+
 ## What I'd add next
 
 - Detecting slow attacks spread out over hours to dodge the threshold
